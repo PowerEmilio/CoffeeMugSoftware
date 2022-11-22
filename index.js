@@ -4,7 +4,7 @@ function irArriba(){
         console.log(scroll);
         var botonArriba = document.getElementById('chad');
 
-        if (scroll > 400) {
+        if (scroll > 300) {
             botonArriba.style.display = "block";
         } else{
             botonArriba.style.display = "none";

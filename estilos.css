@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap%27");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap%27");
-
-:root {
-  --black: #000;
-  --white: #fff;
-  --fondo1: #2e2e2e;
-  --fondo2: #181818;
-  --borderwhite: #e4e1e1;
-}
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Press+Start+2P&display=swap");
 
 /* !BASICOS */
 /*#region *&body&links*/
@@ -31,6 +24,14 @@ body {
 }
 
 /*#endregion *&body&links*/
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --fondo1: #2e2e2e;
+  --fondo2: #181818;
+  --borderwhite: #e4e1e1;
+}
 
 /* !UPBUTTON */
 /*#region upButton*/
@@ -58,6 +59,12 @@ body {
 
 /* !BARRA DE NAVEGACIÓN */
 /*#region navbar*/
+nav h2 {
+  display: none;
+}
+.menu {
+  display: none;
+}
 .logo {
   color: #fff;
   font-size: 30px;
@@ -111,7 +118,7 @@ body {
 }
 /*#endregion navbar*/
 
-/* !ALL MAIN */
+/* *ALL MAIN */
 /*#region main*/
 
 /* !PRIMER DIV */
@@ -128,10 +135,11 @@ body {
 .presentation {
   /*outline: solid 3px #000;*/
   width: 70%;
-  padding: 5% 0;
+  padding: 2% 0;
   border-radius: 20px;
   background-color: var(--fondo2);
   margin: 100px auto;
+  display: block;
   /*border: solid 2px var(--borderwhite); 
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -139,27 +147,24 @@ body {
   -o-border-radius: 20px;*/
 }
 .text {
-  width: 70%;
+  width: 90%;
   font-size: 20px;
   text-align: center;
-  display: inline;
-  float: left;
-  margin: 5% 0 5% 0;
-  padding: 5%;
+  display: block;
+  margin: 2% 0 2% 0;
+  padding: 2%;
 }
 .coffee_logo {
   /*outline: solid 3px #000;*/
-  min-width: 100px;
-  float: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100px;
+  margin: auto;
 }
 .presentation_logo {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100px;
+  height: 100px;
   margin: auto;
+
 }
 
 .coffee_logo:hover {
@@ -253,14 +258,14 @@ body {
     -ms-border-radius: 20px;
     -o-border-radius: 20px;*/
 }
-.second_presentation h3{
+.second_presentation h3 {
   font-size: 30px;
   text-align: center;
   margin: 0px 0 20px 0;
   width: 100%;
 }
 
-.ad_container{
+.ad_container {
   width: 80%;
   height: 200px;
   background-image: url(LOL/background.png);
@@ -296,16 +301,17 @@ body {
   background-color: var(--fondo2);
   display: block;
   margin: 100px auto;
-  
 }
-.three_container__download h3{
+.three_container__download h3 {
   display: block;
   font-size: 30px;
   text-align: center;
   margin: 20px 0 20px 0;
-
 }
-.download{
+.three_container__download img {
+  width: 50px;
+}
+.download {
   display: inline-flex;
   text-align: center;
   min-width: 120px;
@@ -316,13 +322,15 @@ body {
   align-items: center;
   border: solid 2px #fff;
 }
-.download_logo{
+.download_logo {
   width: 20%;
 }
-.center{
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.download_soon {
 }
 
 /*#endregion tercerdiv*/
@@ -385,29 +393,41 @@ body {
   height: 300px;
   resize: none;
 }
-.inputs #gmail:hover{
+.inputs #gmail:hover {
   transform: scale(1.03);
-  transition: .1s ease;
+  transition: 0.1s ease;
   -webkit-transform: scale(1.03);
   -moz-transform: scale(1.03);
   -ms-transform: scale(1.03);
   -o-transform: scale(1.03);
-  -webkit-transition: .1s ease;
-  -moz-transition: .1s ease;
-  -ms-transition: .1s ease;
-  -o-transition: .1s ease;
+  -webkit-transition: 0.1s ease;
+  -moz-transition: 0.1s ease;
+  -ms-transition: 0.1s ease;
+  -o-transition: 0.1s ease;
 }
-.inputs #message:hover{
+.inputs #message:hover {
   transform: scale(1.03);
-  transition: .1s ease;
+  transition: 0.1s ease;
   -webkit-transform: scale(1.03);
   -moz-transform: scale(1.03);
   -ms-transform: scale(1.03);
   -o-transform: scale(1.03);
-  -webkit-transition: .1s ease;
-  -moz-transition: .1s ease;
-  -ms-transition: .1s ease;
-  -o-transition: .1s ease;
+  -webkit-transition: 0.1s ease;
+  -moz-transition: 0.1s ease;
+  -ms-transition: 0.1s ease;
+  -o-transition: 0.1s ease;
+}
+.inputs #gmail:invalid {
+  border-bottom: solid 1px rgb(156, 0, 0);
+}
+.inputs #gmail:valid {
+  border-bottom: solid 1px rgb(35, 161, 35);
+}
+.inputs #message:invalid {
+  border-bottom: solid 1px rgb(156, 0, 0);
+}
+.inputs #message:valid {
+  border-bottom: solid 1px rgb(35, 161, 35);
 }
 
 /* !FORMSENDBUTTON */
@@ -465,52 +485,55 @@ body {
 
 /* !RESPONSIVE */
 /*#region responsive*/
-@media screen and (max-width: 768px){
-  .main_navbar ul{
-    display: none;
+@media screen and (max-width: 768px) {
+  .main_navbar ul li{
+    font-size: 10.4px;
+    margin-right: 3%;
+    padding-right: 3%;
   }
-  .presentation{
+  .presentation {
     display: grid;
     grid-template-columns: repeat(1, auto);
-	  grid-template-rows: repeat(2, auto);
-	  grid-template-areas:"tex"
-                        "img";
-                        
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "tex"
+      "img";
+
     width: 90%;
     padding: 5% 0;
     border-radius: 20px;
     background-color: var(--fondo2);
     margin: 100px auto;
   }
-  .text{
+  .text {
     text-align: center;
     margin: auto;
     display: inline;
     grid-area: tex;
   }
-  .presentation_logo{
+  .presentation_logo {
     grid-area: img;
     width: 100px;
   }
-  .second_presentation{
+  .second_presentation {
     width: 90%;
   }
-  .three_container__download{
+  .three_container__download {
     width: 80%;
   }
-  .center{
+  .center {
     display: block;
   }
-  .download{
+  .download {
     width: 100%;
   }
-  .four_container__support{
+  .four_container__support {
     width: 90%;
   }
-  .four_container__support__form{
+  .four_container__support__form {
     width: 90%;
   }
-  .chad{
+  .chad {
     width: 50px;
     height: 50px;
   }
@@ -519,4 +542,3 @@ body {
 /*#endregion responsive*/
 
 /*#endregion main*/
-
